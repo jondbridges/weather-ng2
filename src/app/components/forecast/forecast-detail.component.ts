@@ -4,10 +4,10 @@ import { ForecastDay } from "../../domain/forecast-day";
 import { ForecastCachingService } from '../../services/forecast-caching.service';
 
 @Component({
-  selector: 'wng-forecast-detail',
+  selector: 'awa-forecast-detail',
   template: `
     <div class="detail">
-      <wng-forecast-day [forecastDay]="forecastDay"></wng-forecast-day>
+      <awa-forecast-day [forecastDay]="forecastDay"></awa-forecast-day>
       <div class="col-md-4 col-md-offset-4 text-center">
         <p>{{cityState}}</p>
         <p>{{forecastDay.desc}}</p>

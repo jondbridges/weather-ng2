@@ -3,7 +3,7 @@ import { Input } from "@angular/core/src/metadata/directives";
 import { ForecastDay } from "../../domain/forecast-day";
 
 @Component({
-  selector: 'wng-forecast-day',
+  selector: 'awa-forecast-day',
   template: `
     <div class="forecast-day">
       <img class="center-block weather-icon" 

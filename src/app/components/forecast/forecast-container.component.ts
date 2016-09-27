@@ -6,7 +6,7 @@ import { ForecastCachingService } from '../../services/forecast-caching.service'
 import { Subscription } from 'rxjs/Subscription';
 
 @Component({
-  selector: 'wng-forecast-container',
+  selector: 'awa-forecast-container',
   template: `
     <div class="container">
       <div class="page-header">
@@ -15,15 +15,15 @@ import { Subscription } from 'rxjs/Subscription';
         </h1>
       </div>
       <div *ngIf="isLoading">
-        <wng-spinner class="col-md-4 col-md-offset-4 text-center" 
-          [displayText]="'Loading...'"></wng-spinner>
+        <awa-spinner class="col-md-4 col-md-offset-4 text-center" 
+          [displayText]="'Loading...'"></awa-spinner>
       </div>
       <div *ngIf="!isLoading">
-        <wng-forecast-day *ngFor="let forecastDay of forecastDays" 
+        <awa-forecast-day *ngFor="let forecastDay of forecastDays" 
           class="col-xs-6 col-sm-4 col-md-3 forecast-card"
           [forecastDay]="forecastDay"
           (click)="handleForecastDaySelect(forecastDay)">
-        </wng-forecast-day> 
+        </awa-forecast-day> 
       </div>
     </div>
   `,

@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'wng-app',
+  selector: 'awa-app',
   template: `
-    <wng-header></wng-header>
+    <awa-header></awa-header>
     <router-outlet></router-outlet>
   `
 })

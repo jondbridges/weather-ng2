@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 
 @Component({
-  selector: 'wng-search',
+  selector: 'awa-search',
   template: `
     <div class="form-group">
       <input class="form-control" [(ngModel)]="cityState" placeholder="St Louis, MO">
