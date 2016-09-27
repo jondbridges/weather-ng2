@@ -10,3 +10,7 @@ npm install
 npm start
 ```
 
+To create a bundled production build:
+```
+npm run build
+```
