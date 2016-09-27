@@ -1,8 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ForecastDay } from "../../domain/forecast-day";
+import { ForecastDay } from '../../domain/forecast-day';
 import { WeatherService }  from '../../services/weather.service';
 import { ForecastCachingService } from '../../services/forecast-caching.service';
+import { Subscription } from 'rxjs/Subscription';
 
 @Component({
   selector: 'wng-forecast-container',
@@ -33,6 +34,7 @@ export class ForecastContainerComponent implements OnInit {
   private cityState: string;
   private forecastDays: ForecastDay[];
   private isLoading: boolean = true;
+  private routeSub: Subscription;
 
   constructor(private route: ActivatedRoute,
               private router: Router,
@@ -40,16 +42,18 @@ export class ForecastContainerComponent implements OnInit {
               private forecastCachingService: ForecastCachingService) { }
 
   ngOnInit() {
-    this.getCityStateFromRoute();
-    this.getForecastDays();
+    this.routeSub = this.route.params.subscribe(params => {
+      this.cityState = params['cityState'];
+      this.getForecastDays(this.cityState);
+    });
   }
 
-  private getCityStateFromRoute() {
-    this.cityState = this.route.snapshot.params['cityState'];
+  ngOnDestroy() {
+    this.routeSub.unsubscribe();
   }
 
-  private getForecastDays() {
-    this.weatherService.getForecast(this.cityState)
+  private getForecastDays(cityState) {
+    this.weatherService.getForecast(cityState)
       .then(forecastDays => {
         this.forecastDays = forecastDays;
         this.forecastCachingService.forecastDays = forecastDays;
