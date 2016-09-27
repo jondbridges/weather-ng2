@@ -1,0 +1,17 @@
+.forecast-header {
+  font-weight: 200;
+}
+
+.forecast-header > small {
+  font-weight: 100;
+}
+
+.forecast-card {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.forecast-card:hover {
+  background-color: rgba(80, 120, 140, 0.06);
+}
+

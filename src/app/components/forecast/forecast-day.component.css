@@ -1,0 +1,12 @@
+.forecast-day {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+.weather-icon {
+  height: 130px;
+  margin-bottom: 10px;
+}
+

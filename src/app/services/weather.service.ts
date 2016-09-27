@@ -32,8 +32,13 @@ export class WeatherService {
 
   private convertToForecastDay(day: any): ForecastDay {
     let forecastDay = new ForecastDay();
+    forecastDay.id = day.dt;
     forecastDay.date = day.dt * 1000; // convert to js date from unix
     forecastDay.conditionIcon = day.weather[0].icon;
+    forecastDay.desc = day.weather[0].description;
+    forecastDay.minTemp = Math.round(day.temp.min);
+    forecastDay.maxTemp = Math.round(day.temp.max);
+    forecastDay.humidity = day.humidity;
 
     return forecastDay;
   }

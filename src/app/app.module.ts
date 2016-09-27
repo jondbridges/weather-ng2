@@ -9,8 +9,12 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
-import { ForecastComponent } from './components/forecast/forecast.component';
 import { WeatherService } from './services/weather.service';
+import { ForecastCachingService } from './services/forecast-caching.service';
+import { ForecastContainerComponent } from './components/forecast/forecast-container.component';
+import { ForecastDayComponent } from './components/forecast/forecast-day.component';
+import { ForecastDetailComponent } from './components/forecast/forecast-detail.component';
+import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +22,10 @@ import { WeatherService } from './services/weather.service';
     HeaderComponent,
     HomeComponent,
     SearchComponent,
-    ForecastComponent
+    ForecastContainerComponent,
+    ForecastDayComponent,
+    ForecastDetailComponent,
+    SpinnerComponent
   ],
   imports: [
     BrowserModule,
@@ -27,7 +34,8 @@ import { WeatherService } from './services/weather.service';
     HttpModule
   ],
   providers: [
-    WeatherService
+    WeatherService,
+    ForecastCachingService
   ],
   bootstrap: [AppComponent]
 })
