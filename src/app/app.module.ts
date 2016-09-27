@@ -10,6 +10,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './components/home/home.component';
 import { SearchComponent } from './components/search/search.component';
 import { ForecastComponent } from './components/forecast/forecast.component';
+import { WeatherService } from './services/weather.service';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,9 @@ import { ForecastComponent } from './components/forecast/forecast.component';
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [
+    WeatherService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
