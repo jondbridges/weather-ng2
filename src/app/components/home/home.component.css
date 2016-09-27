@@ -1,0 +1,14 @@
+.home-content {
+  background-size: cover;
+  background-image: url('assets/images/pattern.svg');
+  display: flex;
+  align-items: center;
+  height: 92%;
+  width: 100%;
+}
+
+.home-search-label {
+  color: white;
+  font-weight: 100;
+  font-size: 35px;
+}

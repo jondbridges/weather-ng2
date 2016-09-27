@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
+  selector: 'wng-app',
   template: `
-    <wa-header></wa-header>
+    <wng-header></wng-header>
     <router-outlet></router-outlet>
   `
 })

@@ -6,6 +6,6 @@ export class WeatherNg2Page {
   }
 
   getParagraphText() {
-    return element(by.css('app-root h1')).getText();
+    return element(by.css('wng-app h1')).getText();
   }
 }
