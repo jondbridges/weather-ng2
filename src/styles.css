@@ -1,1 +1,63 @@
-/* You can add global styles to this file, and also import other style files */
+html, body, #root, .app {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+.btn-pad-left {
+  margin-left: 10px;
+}
+
+.home-content {
+  background-size: cover;
+  background-image: url('assets/images/pattern.svg');
+  display: flex;
+  align-items: center;
+  height: 92%;
+  width: 100%;
+}
+
+.home-search-label {
+  color: white;
+  font-weight: 100;
+  font-size: 35px;
+}
+
+.forecast-header {
+  font-weight: 200;
+}
+
+.forecast-header > small {
+  font-weight: 100;
+}
+
+.forecast-day {
+  margin-top: 20px;
+  padding: 10px;
+  font-size: 1.8em;
+  font-weight: 100;
+}
+
+.forecast-card {
+  cursor: pointer;
+  border-radius: 10px;
+}
+
+.forecast-card:hover {
+  background-color: rgba(80, 120, 140, 0.06);
+}
+
+.weather-icon {
+  height: 130px;
+  margin-bottom: 10px;
+}
+
+.detail {
+  font-weight: 100;
+  font-size: 2em;
+}
+
+.detail label {
+  font-weight: 200;
+}

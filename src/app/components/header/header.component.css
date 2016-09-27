@@ -1,0 +1,23 @@
+.navbar {
+  background-color: rgba(252, 90, 44, 0.89);
+  border-radius: 0;
+  margin: 0;
+}
+
+.navbar-default {
+  border: none;
+  padding: 5px;
+}
+
+.navbar-default .navbar-brand {
+  color: white;
+  font-size: 2em;
+}
+
+.navbar-default .navbar-brand:hover {
+  color: white;
+}
+
+.navbar-default .navbar-brand:focus {
+  color: white;
+}
