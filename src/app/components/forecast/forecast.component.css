@@ -1,0 +1,8 @@
+.forecast-header {
+  font-weight: 200;
+}
+
+.forecast-header > small {
+  font-weight: 100;
+}
+

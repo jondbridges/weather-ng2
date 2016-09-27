@@ -1,22 +1,28 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input} from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'wng-search',
   template: `
     <div class="form-group">
-      <input class="form-control" type="text" placeholder="St Louis, MO">
+      <input class="form-control" [(ngModel)]="cityState" placeholder="St Louis, MO">
     </div>
-    <button class="btn btn-success btn-pad-left" type="submit">
+    <button class="btn btn-success btn-pad-left" (click)="handleSubmitSearch()">
       Get Weather
     </button>
   `,
   styleUrls: ['./search.component.css']
 })
-export class SearchComponent implements OnInit {
+export class SearchComponent {
 
-  constructor() { }
+  private cityState: string;
 
-  ngOnInit() {
+  constructor(private router: Router) { }
+
+  handleSubmitSearch(): void {
+    if (this.cityState) {
+      this.router.navigate(['/forecast', this.cityState]);
+    }
   }
 
 }
