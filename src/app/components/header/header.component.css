@@ -11,6 +11,7 @@
 
 .navbar-default .navbar-brand {
   color: white;
+  padding-top: 0;
   font-size: 2em;
 }
 
@@ -20,4 +21,11 @@
 
 .navbar-default .navbar-brand:focus {
   color: white;
+}
+
+.navbar-brand > img {
+  display: inline-block;
+  height: 45px;
+  width: 45px;
+  margin-bottom: 5px;
 }

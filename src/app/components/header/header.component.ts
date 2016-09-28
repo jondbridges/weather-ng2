@@ -7,7 +7,8 @@ import { Component } from '@angular/core';
       <div class="container-fluid">
         <div class="navbar-header">
           <a class="navbar-brand" routerLink="/">
-            Angular Weather App
+            <img src="assets/images/angular2-logo.png" alt="React" />
+            Angular 2 Weather
           </a>
         </div>
         <div class="navbar-form navbar-right">
