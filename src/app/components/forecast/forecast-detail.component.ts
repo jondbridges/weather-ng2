@@ -11,8 +11,8 @@ import { ForecastCachingService } from '../../services/forecast-caching.service'
       <div class="col-md-4 col-md-offset-4 text-center">
         <p>{{cityState}}</p>
         <p>{{forecastDay.desc}}</p>
-        <p><label>Min Temperature:</label> {{forecastDay.minTemp}} °F</p>
         <p><label>Max Temperature:</label> {{forecastDay.maxTemp}} °F</p>
+        <p><label>Min Temperature:</label> {{forecastDay.minTemp}} °F</p>
         <p><label>Humidity:</label> {{forecastDay.humidity}}%</p>
       </div>
     </div>
