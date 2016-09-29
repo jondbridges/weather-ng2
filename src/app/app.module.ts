@@ -13,7 +13,7 @@ import { WeatherService } from './services/weather.service';
 import { ForecastCachingService } from './services/forecast-caching.service';
 import { ForecastContainerComponent } from './components/forecast/forecast-container.component';
 import { ForecastDayComponent } from './components/forecast/forecast-day.component';
-import { ForecastDetailComponent } from './components/forecast/forecast-detail.component';
+import { DetailComponent } from './components/detail/detail.component';
 import { SpinnerComponent } from './components/spinner/spinner.component';
 
 @NgModule({
@@ -24,7 +24,7 @@ import { SpinnerComponent } from './components/spinner/spinner.component';
     SearchComponent,
     ForecastContainerComponent,
     ForecastDayComponent,
-    ForecastDetailComponent,
+    DetailComponent,
     SpinnerComponent
   ],
   imports: [

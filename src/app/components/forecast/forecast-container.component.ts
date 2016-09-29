@@ -63,6 +63,6 @@ export class ForecastContainerComponent implements OnInit {
   }
 
   private handleForecastDaySelect(forecastDay: ForecastDay) {
-    this.router.navigate(['/forecast', this.cityState, forecastDay.id]);
+    this.router.navigate(['/detail', this.cityState, forecastDay.id]);
   }
 }

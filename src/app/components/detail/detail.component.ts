@@ -4,7 +4,7 @@ import { ForecastDay } from "../../domain/forecast-day";
 import { ForecastCachingService } from '../../services/forecast-caching.service';
 
 @Component({
-  selector: 'awa-forecast-detail',
+  selector: 'awa-detail',
   template: `
     <div class="detail">
       <awa-forecast-day [forecastDay]="forecastDay"></awa-forecast-day>
@@ -17,9 +17,9 @@ import { ForecastCachingService } from '../../services/forecast-caching.service'
       </div>
     </div>
   `,
-  styleUrls: ['./forecast-detail.component.css']
+  styleUrls: ['detail.component.css']
 })
-export class ForecastDetailComponent implements OnInit {
+export class DetailComponent implements OnInit {
 
   private cityState: string;
   private forecastDay: ForecastDay;
