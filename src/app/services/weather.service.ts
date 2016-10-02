@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { Http, Response } from "@angular/http";
 import 'rxjs/add/operator/toPromise';
 
-import { ForecastDay } from '../domain/forecast-day';
+import { ForecastDay } from '../models/forecast-day.model';
 
 const APP_ID = 'f6ea15ddd1b9a6e5f6911074912b7eb6';
 const FORECAST_URL = `http://api.openweathermap.org/data/2.5/forecast/daily?appid=${APP_ID}&mode=json&units=imperial`;

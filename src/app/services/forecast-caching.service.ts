@@ -1,5 +1,5 @@
 import { Injectable } from "@angular/core";
-import { ForecastDay } from "../domain/forecast-day";
+import { ForecastDay } from "../models/forecast-day.model";
 
 @Injectable()
 export class ForecastCachingService {

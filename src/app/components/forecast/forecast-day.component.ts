@@ -1,11 +1,11 @@
 import { Component } from '@angular/core';
 import { Input } from "@angular/core/src/metadata/directives";
-import { ForecastDay } from "../../domain/forecast-day";
+import { ForecastDay } from "../../models/forecast-day.model";
 
 @Component({
   selector: 'awa-forecast-day',
   template: `
-    <div class="forecast-day">
+    <div class="day-container">
       <img class="center-block weather-icon" 
         src="assets/images/weather-icons/{{forecastDay.conditionIcon}}.svg"
         alt="Weather" />

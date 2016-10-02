@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { ForecastDay } from '../../domain/forecast-day';
+import { ForecastDay } from '../../models/forecast-day.model';
 import { WeatherService }  from '../../services/weather.service';
 import { ForecastCachingService } from '../../services/forecast-caching.service';
 import { Subscription } from 'rxjs/Subscription';

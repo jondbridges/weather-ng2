@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
-import { ForecastDay } from "../../domain/forecast-day";
+import { ForecastDay } from "../../models/forecast-day.model";
 import { ForecastCachingService } from '../../services/forecast-caching.service';
 
 @Component({
