@@ -4,7 +4,7 @@ import { By } from '@angular/platform-browser';
 
 import { AppComponent } from './app.component';
 
-describe('App: TestProject', () => {
+describe('AppComponent', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
       declarations: [

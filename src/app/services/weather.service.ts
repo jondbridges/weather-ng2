@@ -1,11 +1,11 @@
 import { Injectable } from '@angular/core';
-import { Http, Response } from "@angular/http";
+import { Http, Response } from '@angular/http';
 import 'rxjs/add/operator/toPromise';
 
 import { ForecastDay } from '../models/forecast-day.model';
 
 const APP_ID = 'f6ea15ddd1b9a6e5f6911074912b7eb6';
-const FORECAST_URL = `http://api.openweathermap.org/data/2.5/forecast/daily?appid=${APP_ID}&mode=json&units=imperial`;
+export const FORECAST_URL = `http://api.openweathermap.org/data/2.5/forecast/daily?appid=${APP_ID}&mode=json&units=imperial`;
 
 @Injectable()
 export class WeatherService {
@@ -16,12 +16,12 @@ export class WeatherService {
     return this.getFiveDayWeatherData(cityState)
       .then(resp => {
         return resp.json().list
-          .map(day => this.convertToForecastDay(day))
+          .map(day => this.convertToForecastDay(day));
       })
       .catch(error => {
         // Show a friendly message in a production app.
         console.error('There was an error getting the five day weather forecast', error);
-      })
+      });
   }
 
   private getFiveDayWeatherData(cityState: string): Promise<Response> {
