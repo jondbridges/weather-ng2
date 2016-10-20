@@ -6,10 +6,19 @@ import {Input} from "@angular/core/src/metadata/directives";
   template: `
     <div>
       <i class="fa fa-circle-o-notch fa-spin fa-3x spinner"></i> 
-      <span class="spinner-text">{{displayText}}</span>
+      <p>{{displayText}}</p>
     </div>
   `,
-  styleUrls: ['./spinner.component.css']
+  styles: [`
+    i {
+      padding: 0 10px;
+    }
+
+    p {
+      font-size: 45px;
+      font-weight: 100;
+    }
+  `]
 })
 export class SpinnerComponent {
   @Input() displayText: string;

@@ -1,7 +1,7 @@
 import {Http, HttpModule, BaseRequestOptions, ConnectionBackend, Response, ResponseOptions} from '@angular/http';
 import {MockBackend} from '@angular/http/testing';
 import {TestBed, inject, tick, fakeAsync} from '@angular/core/testing';
-import {ForecastDay} from "../models/forecast-day.model";
+import {ForecastDay} from '../models/forecast-day.model';
 import { WeatherService, FORECAST_URL } from './weather.service';
 import weatherServiceTestData from './weather.service.testdata';
 
@@ -13,13 +13,15 @@ describe('WeatherService', () => {
       ],
       providers: [
         {
-          provide: Http, useFactory: (backend: ConnectionBackend, defaultOptions: BaseRequestOptions) => {
-          return new Http(backend, defaultOptions);
-        }, deps: [MockBackend, BaseRequestOptions]
+          provide: Http,
+          useFactory: (backend: ConnectionBackend, defaultOptions: BaseRequestOptions) => {
+            return new Http(backend, defaultOptions);
+          },
+          deps: [MockBackend, BaseRequestOptions]
         },
-        {provide: WeatherService, useClass: WeatherService},
-        {provide: MockBackend, useClass: MockBackend},
-        {provide: BaseRequestOptions, useClass: BaseRequestOptions}
+        WeatherService,
+        MockBackend,
+        BaseRequestOptions
       ]
     });
   });
@@ -28,7 +30,7 @@ describe('WeatherService', () => {
     inject([WeatherService, MockBackend], fakeAsync((weatherService: WeatherService, mockBackend: MockBackend) => {
 
       let forecastDays: ForecastDay[];
-      let cityName: string = 'St. Louis, MO';
+      let cityName = 'St. Louis, MO';
 
       mockBackend.connections.subscribe(c => {
         expect(c.request.url).toBe(FORECAST_URL + '&q=' + cityName + '&cnt=5');
